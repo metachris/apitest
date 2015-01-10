@@ -1,0 +1,12 @@
+request:
+  method: GET
+  url: http://example.com
+response:
+  headers:
+    Accept-Ranges: bytes
+    Content-Type: text/html
+    Vary: Accept-Encoding
+    X-Cache: HIT
+    x-ec-custom-error: '1'
+  status: 200
+  eval: assert """<title>Example Domain</title>""" in response.body
